@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: clone the repo
         uses: actions/checkout@v4
-      - name: Install JAVA
+      - name: Install JAVA on runner
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin' 
-          java-version: '25'  
+          java-version: '17'  
       - name: build the java package
         uses: mvn clean package
       - name: Set up Docker
