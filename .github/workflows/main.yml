@@ -16,7 +16,7 @@ jobs:
           distribution: 'temurin' 
           java-version: '17'  
       - name: build the java package
-        uses: mvn clean package
+        run: mvn clean package
       - name: Set up Docker
         uses: docker/setup-docker-action@v5    
       - name: Login to Docker Hub
